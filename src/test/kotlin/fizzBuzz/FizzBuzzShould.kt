@@ -9,4 +9,9 @@ class FizzBuzzShould {
         val fizzBuzz = FizzBuzz()
         assertEquals("1",fizzBuzz.convert(1))
     }
+    @Test
+    fun `return 2 as a string when 2 provided`(){
+        val fizzBuzz = FizzBuzz()
+        assertEquals("2", fizzBuzz.convert(2))
+    }
 }
