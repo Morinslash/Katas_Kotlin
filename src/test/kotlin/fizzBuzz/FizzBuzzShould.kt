@@ -24,4 +24,10 @@ class FizzBuzzShould {
         val fizzBuzz = FizzBuzz()
         assertEquals("Buzz", fizzBuzz.convert(number))
     }
+    @ParameterizedTest
+    @ValueSource(ints = [15,30,45])
+    fun `return FizzBuzz when number is divisible by 15`(number: Int){
+        val fizzBuzz = FizzBuzz()
+        assertEquals("FizzBuzz", fizzBuzz.convert(number))
+    }
 }
