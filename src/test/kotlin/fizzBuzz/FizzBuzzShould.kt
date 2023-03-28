@@ -12,4 +12,16 @@ class FizzBuzzShould {
         val fizzBuzz = FizzBuzz()
         assertEquals(number.toString(), fizzBuzz.convert(number))
     }
+    @ParameterizedTest
+    @ValueSource(ints = [3,6,9])
+    fun `return Fizz when number is divisible by 3`(number: Int){
+        val fizzBuzz = FizzBuzz()
+        assertEquals("Fizz", fizzBuzz.convert(number))
+    }
+//    @ParameterizedTest
+//    @ValueSource(ints = [3,6,9])
+//    fun `return Buzz when number is divisible by 5`(number: Int){
+//        val fizzBuzz = FizzBuzz()
+//        assertEquals("Fizz", fizzBuzz.convert(number))
+//    }
 }
