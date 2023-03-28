@@ -1,17 +1,15 @@
 package fizzBuzz
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 
 class FizzBuzzShould {
-    @Test
-    fun `return 1 as a string when 1 provided`(){
+    @ParameterizedTest
+    @ValueSource(ints = [1,2,4])
+    fun `return number as string when number provided`(number: Int){
         val fizzBuzz = FizzBuzz()
-        assertEquals("1",fizzBuzz.convert(1))
-    }
-    @Test
-    fun `return 2 as a string when 2 provided`(){
-        val fizzBuzz = FizzBuzz()
-        assertEquals("2", fizzBuzz.convert(2))
+        assertEquals(number.toString(), fizzBuzz.convert(number))
     }
 }
